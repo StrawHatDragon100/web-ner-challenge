@@ -14,8 +14,9 @@ Originally developed in 2021 by Joe Cummings (@joecummings) and Jacob Lichtefeld
 ```
     conda create --name web-ner python=3.8
 ```
-3. Run  ```make install FRONTEND=angular-frontend BACKEND=flask-backend```
-4. Run  ```make start FRONTEND=angular-frontend BACKEND=flask-backend```
+3. Activate the virtual environment ```conda activate web-ner```
+4. Run  ```make install FRONTEND=angular-frontend BACKEND=flask-backend```
+5. Run  ```make start FRONTEND=angular-frontend BACKEND=flask-backend```
 
 
 ### Screen Shot
