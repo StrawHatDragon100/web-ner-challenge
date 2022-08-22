@@ -1,11 +1,13 @@
 from flask import Flask
-from flask_cors import CORS
+from flask_restful import Api
+from api import NERAPI, LanguagesAPI, ModelsAPI
 
 app = Flask(__name__)
-ors = CORS(app)
-app.config["CORS_HEADERS"] = "Content-Type"
+api = Api(app)
 
+api.add_resource(NERAPI, '/ner')
+api.add_resource(LanguagesAPI, '/languages')
+api.add_resource(ModelsAPI, '/models')
 
-@app.route("/")
-def hello_world():
-    return "Hello World!"
+if __name__ == '__main__':
+    app.run()

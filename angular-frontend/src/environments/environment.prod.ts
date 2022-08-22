@@ -1,3 +1,6 @@
 export const environment = {
-  production: true
+  production: true,
+  nerURL: '/ner',
+  languageURL: '/languages',
+  modelURL: '/models'
 };

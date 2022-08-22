@@ -1,0 +1,30 @@
+<div fxFlex fxLayout="column" fxLayoutAlign="center">
+  <form fxFlex [formGroup]="myForm" fxLayout="column" (ngSubmit)="onSubmit()">
+    <mat-form-field>
+      <mat-label>Text</mat-label>
+      <textarea matInput formControlName="text"></textarea>
+    </mat-form-field>
+    <div fxLayout="row" fxLayoutGap="10">
+      <mat-form-field fxFlex>
+        <mat-label>Language</mat-label>
+        <mat-select (selectionChange)="onLanguageSelection()" formControlName="language">
+          <mat-option *ngFor="let language of (languages$ | async)" [value]="language.value">{{language.slug}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field fxFlex>
+        <mat-label>Model</mat-label>
+        <mat-select formControlName="model">
+          <mat-option *ngFor="let model of (models$ | async)" [value]="model.value">{{model.slug}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <div fxLayout="column" fxLayoutAlign="center center">
+      <button mat-flat-button color="primary" type="submit">Go</button>
+    </div>
+  </form>
+  <div fxFlex fxLayout="column" fxLayoutAlign="center center">
+    <span>
+      {{ result$ | async }}
+    </span>
+  </div>
+</div>
