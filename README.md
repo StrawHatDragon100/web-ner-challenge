@@ -16,6 +16,7 @@ Originally developed in 2021 by Joe Cummings (@joecummings) and Jacob Lichtefeld
 ```
 3. Activate the virtual environment ```conda activate web-ner```
 4. Run  ```make install FRONTEND=angular-frontend BACKEND=flask-backend```
+    - It might take some time, to download all the models.
 5. Run  ```make start FRONTEND=angular-frontend BACKEND=flask-backend```
 
 
