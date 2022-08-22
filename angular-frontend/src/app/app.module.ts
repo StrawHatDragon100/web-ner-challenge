@@ -13,13 +13,15 @@ import {MatCardModule} from '@angular/material/card';
 import {MatInputModule} from '@angular/material/input'; 
 import {MatToolbarModule} from '@angular/material/toolbar'; 
 import {MatButtonModule} from '@angular/material/button';
-import {MatSelectModule} from '@angular/material/select'; 
+import {MatSelectModule} from '@angular/material/select';
+import { FormatNerPipe } from './pipes/format-ner.pipe'; 
 
 @NgModule({
   declarations: [
     AppComponent,
     StageComponent,
-    FormComponent
+    FormComponent,
+    FormatNerPipe
   ],
   imports: [
     BrowserModule,

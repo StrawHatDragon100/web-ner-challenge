@@ -23,8 +23,7 @@
     </div>
   </form>
   <div fxFlex fxLayout="column" fxLayoutAlign="center center">
-    <span>
-      {{ result$ | async }}
-    </span>
+    <p [innerHTML]="result$ | async | formatNer">
+    </p>
   </div>
 </div>

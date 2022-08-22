@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Observable } from 'rxjs';
 import { HttpService } from 'src/app/services/http.service';
@@ -7,7 +7,8 @@ import { HttpService } from 'src/app/services/http.service';
   selector: 'app-form',
   templateUrl: './form.component.html',
   styleUrls: ['./form.component.css'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  encapsulation: ViewEncapsulation.None
 })
 export class FormComponent implements OnInit {
 
